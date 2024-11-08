@@ -1,0 +1,98 @@
+<!DOCTYPE HTML>
+<!--
+	Solid State by HTML5 UP
+	html5up.net | @ajlkn
+	Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
+-->
+<html>
+	<head>
+		<title>사망 확인서 검사</title>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+		<link rel="stylesheet" href="assets/css/main.css" />
+		<noscript><link rel="stylesheet" href="assets/css/noscript.css" /></noscript>
+	</head>
+	<body class="is-preload">
+
+		<!-- Page Wrapper -->
+			<div id="page-wrapper">
+
+				<!-- Header -->
+					<header id="header">
+						<h1><a href="index.html">리멤버리</a></h1>
+						<nav>
+							<a href="#menu">목록</a>
+						</nav>
+					</header>
+
+				<!-- Menu -->
+					<nav id="menu">
+						<div class="inner">
+							<h2>목록</h2>
+							<ul class="links">
+								<li><a href="index.html">첫 화면</a></li>
+								<li><a href="intro.html">서비스 소개</a></li>
+								<li><a href="todo_daily.html">오늘의 추억</a></li>
+								<li><a href="family.html">유족 정보</a></li>
+								<li><a href="find_data.html">정보 받기</a></li>
+								<li><a href="setting.html">설정</a></li>
+								<li><a href="log_in.html">로그인</a></li>
+								<li><a href="sign_up.html">회원가입</a></li>
+							</ul>
+							<a href="#" class="close">Close</a>
+						</div>
+					</nav>
+
+				<!-- Wrapper -->
+					<section id="wrapper">
+						<header>
+							<div class="inner">
+								<h2>사망 확인서 검사</h2>
+								<p>본 검사는 정보 악용 가능성을 낮추기 위해 정보의 소유자에 대한 사망 확인서를 검사합니다.</p>
+							</div>
+							<ul class="actions">
+								<li><a class="button primary" onclick="addText()">사진 업로드</a></li>
+							</ul>
+						</header>
+						<div class="inner">
+							<div id="wait_complete" style="text-align: center; align-items: center;"></div>
+							<script>
+								function addText() {
+									
+								newParagraph = document.createElement("h2");
+								newParagraph.textContent = "정상적으로 업로드되었습니다.";
+								document.getElementById("wait_complete").appendChild(newParagraph);
+								newParagraph = document.createElement("h3");
+								newParagraph.textContent = "1 ~ 2일간 검사가 진행되며, 사진은 검사후 즉시 처분됩니다.";
+								document.getElementById("wait_complete").appendChild(newParagraph);
+								
+								setTimeout(function() {
+									const newDiv = document.createElement("a");
+									newDiv.textContent = "정보 얻기";
+								
+									// 클래스와 ID 설정
+									newDiv.classList.add("button ");
+									newDiv.href = ".html";
+									document.getElementById("wait_complete").appendChild(newDiv);
+									}, 0);
+									// 문서에 추가
+									
+
+								}
+							</script>
+						</div>
+						
+					</section>
+
+			</div>
+
+		<!-- Scripts -->
+			<script src="assets/js/jquery.min.js"></script>
+			<script src="assets/js/jquery.scrollex.min.js"></script>
+			<script src="assets/js/browser.min.js"></script>
+			<script src="assets/js/breakpoints.min.js"></script>
+			<script src="assets/js/util.js"></script>
+			<script src="assets/js/main.js"></script>
+
+	</body>
+</html>

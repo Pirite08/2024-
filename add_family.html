@@ -1,0 +1,87 @@
+<!DOCTYPE HTML>
+<!--
+	Solid State by HTML5 UP
+	html5up.net | @ajlkn
+	Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
+-->
+<html>
+	<head>
+		<title>가족 추가하기</title>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+		<link rel="stylesheet" href="assets/css/main.css" />
+		<noscript><link rel="stylesheet" href="assets/css/noscript.css" /></noscript>
+	</head>
+	<body class="is-preload">
+
+		<!-- Page Wrapper -->
+			<div id="page-wrapper">
+
+				<!-- Header -->
+					<header id="header">
+						<h1><a href="index.html">리멤버리</a></h1>
+						<nav>
+							<a href="#menu">목록</a>
+						</nav>
+					</header>
+
+				<!-- Menu -->
+					<nav id="menu">
+						<div class="inner">
+							<h2>목록</h2>
+							<ul class="links">
+								<li><a href="index.html">첫 화면</a></li>
+								<li><a href="intro.html">서비스 소개</a></li>
+								<li><a href="todo_daily.html">오늘의 추억</a></li>
+								<li><a href="family.html">유족 정보</a></li>
+								<li><a href="find_data.html">정보 받기</a></li>
+								<li><a href="setting.html">설정</a></li>
+								<li><a href="log_in.html">로그인</a></li>
+								<li><a href="sign_up.html">회원가입</a></li>
+							</ul>
+							<a href="#" class="close">Close</a>
+						</div>
+					</nav>
+
+				<!-- Wrapper -->
+					<section id="wrapper">
+						<header>
+							<h3 style="text-align: center;"><b>가족 추가하기</b></h3>
+							<h2 style="text-align: center;">인증 번호 입력</h2>
+							<input  type="text" name="demo-name" id="demo-name" value="" placeholder="인증번호 6자리" />
+							<br>
+							<div class="col-6 col-12-medium">
+								<ul class="actions stacked">
+									<li><a class="button primary fit" onclick="addText()">인증하기</a></li>								</ul>
+						</header>
+						<div id="complete" style="text-align: center; color: crimson;"></div>
+						<script>
+							function addText() {
+								
+							newParagraph = document.createElement("h2");
+							newParagraph.textContent = "정상적으로 완료되었습니다!";
+							document.getElementById("complete").appendChild(newParagraph);
+							newParagraph = document.createElement("h3");
+							newParagraph.textContent = "5초뒤 유족 정보화면으로 이동합니다.";
+							document.getElementById("complete").appendChild(newParagraph);
+
+
+							setTimeout(function() {
+        						window.location.href = "family.html"; // 이동할 HTML 파일
+      						}, 5000);
+							}
+						</script>
+					</section>
+
+			</div>
+
+		<!-- Scripts -->
+			<script src="assets/js/jquery.min.js"></script>
+			<script src="assets/js/jquery.scrollex.min.js"></script>
+			<script src="assets/js/browser.min.js"></script>
+			<script src="assets/js/breakpoints.min.js"></script>
+			<script src="assets/js/util.js"></script>
+			<script src="assets/js/main.js"></script>
+
+	</body>
+</html>
